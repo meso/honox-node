@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Deploy to Sakura AppRun
-        uses: meso/sakura-apprun-action@beta
+        uses: meso/sakura-apprun-action@main
         with:
           sakura-api-key: ${{ secrets.SAKURA_API_KEY }}
           sakura-api-secret: ${{ secrets.SAKURA_API_SECRET }}
