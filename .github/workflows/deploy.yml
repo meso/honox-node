@@ -1,0 +1,26 @@
+name: Deploy to Sakura AppRun
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Deploy to Sakura AppRun
+        uses: meso/sakura-apprun-action@beta
+        with:
+          sakura-api-key: ${{ secrets.SAKURA_API_KEY }}
+          sakura-api-secret: ${{ secrets.SAKURA_API_SECRET }}
+          container-registry: ${{ secrets.CONTAINER_REGISTRY }}
+          container-registry-user: ${{ secrets.REGISTRY_USER }}
+          container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+          app-name: honox-node
+          port: 3000
