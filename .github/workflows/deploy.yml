@@ -24,3 +24,8 @@ jobs:
           container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
           app-name: honox-node
           port: 3000
+          # SQLite自動バックアップ設定
+          object-storage-bucket: sqlite-backup
+          object-storage-access-key: ${{ secrets.STORAGE_ACCESS_KEY }}
+          object-storage-secret-key: ${{ secrets.STORAGE_SECRET_KEY }}
+          sqlite-db-path: ./todos.db

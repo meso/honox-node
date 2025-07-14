@@ -2,13 +2,20 @@
   "name": "honox-node",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
+    "dev": "vite",
+    "build": "vite build && vite build --mode client",
+    "start": "node ./dist/index.js",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hono/node-server": "^1.15.0",
-    "hono": "^4.8.4"
+    "@hono/vite-build": "^1.6.2",
+    "@hono/vite-dev-server": "^0.20.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "better-sqlite3": "^12.2.0",
+    "hono": "^4.8.4",
+    "honox": "^0.1.43",
+    "vite": "^7.0.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
