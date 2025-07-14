@@ -22,7 +22,6 @@ jobs:
           container-registry: meso.sakuracr.jp
           container-registry-user: ${{ secrets.REGISTRY_USER }}
           container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          app-name: honox-node
           port: 3000
           # SQLite自動バックアップ設定
           object-storage-bucket: sqlite-backup

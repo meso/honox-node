@@ -8,6 +8,10 @@
 
 以上の値を、GitHub のリポジトリ Secret に登録してください
 
+また、deploy.yml にて以下の値を記述してください
+- container-registry: ${MYREGISTRY}.sakuracr.jp
+- port: 3000 以外で起動する場合は指定してください
+
 
 ## 開発
 ```
