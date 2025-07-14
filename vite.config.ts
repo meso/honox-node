@@ -13,12 +13,15 @@ export default defineConfig(({ mode }) => {
             entryFileNames: 'client.js',
           },
         },
-        copyPublicDir: false,
+        copyPublicDir: true,
         emptyOutDir: false,
       },
     }
   } else {
     return {
+      build: {
+        copyPublicDir: false,
+      },
       plugins: [
         honox(),
         build({
