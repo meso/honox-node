@@ -23,7 +23,7 @@
 - object-storage-bucket: SQLite のデータベースファイルをバックアップするさくらのオブジェクトストレージのバケット名
 
 
-## 開発
+## 開発サーバーの起動
 ```
 npm install
 npm run dev
